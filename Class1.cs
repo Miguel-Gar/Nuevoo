@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +20,15 @@ namespace Nuevoo
             if (hoy < fechaNacimiento.AddYears(e))
             {
                 e--;
-                return (e);
-                //return ("la edad es " + e.ToString() + "Años";);
-
             }
+            return (e);
+        }
+        public void normalizaNombre()
+        {
+            Nombre = Nombre.Trim();           
+            Nombre = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(Nombre);
+            Apellido = Apellido.Trim();
+            Apellido = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(Apellido);
         }
     }
 }

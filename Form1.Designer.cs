@@ -45,6 +45,7 @@
             this.buttonmostrar = new System.Windows.Forms.Button();
             this.buttoncalcularedad = new System.Windows.Forms.Button();
             this.eactual = new System.Windows.Forms.Label();
+            this.Borrarcontenido = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -205,11 +206,24 @@
             this.eactual.TabIndex = 16;
             this.eactual.Text = "-";
             // 
+            // Borrarcontenido
+            // 
+            this.Borrarcontenido.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Borrarcontenido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Borrarcontenido.Location = new System.Drawing.Point(246, 186);
+            this.Borrarcontenido.Name = "Borrarcontenido";
+            this.Borrarcontenido.Size = new System.Drawing.Size(166, 39);
+            this.Borrarcontenido.TabIndex = 17;
+            this.Borrarcontenido.Text = "Limpiar";
+            this.Borrarcontenido.UseVisualStyleBackColor = false;
+            this.Borrarcontenido.Click += new System.EventHandler(this.Borrarcontenido_Click);
+            // 
             // Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 346);
+            this.Controls.Add(this.Borrarcontenido);
             this.Controls.Add(this.eactual);
             this.Controls.Add(this.buttoncalcularedad);
             this.Controls.Add(this.buttonmostrar);
@@ -253,6 +267,7 @@
         private System.Windows.Forms.Button buttonmostrar;
         private System.Windows.Forms.Button buttoncalcularedad;
         private System.Windows.Forms.Label eactual;
+        private System.Windows.Forms.Button Borrarcontenido;
     }
 }
 

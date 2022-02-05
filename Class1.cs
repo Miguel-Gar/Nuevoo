@@ -12,17 +12,17 @@ namespace Nuevoo
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public DateTime fechaNacimiento { get; set; }
-        //public int edad()
-        //{
-        //    DateTime hoy = DateTime.Today;
-        //    int e = hoy.Year - fechaNacimiento.Year;
-        //    if (hoy< fechaNacimiento.AddYears(e))
-        //    {
-        //        e--;
-        //        return (e);
-        //        //return ("la edad es " + e.ToString() + "Años";);
+        public int edad()
+        {
+            DateTime hoy = DateTime.Today;
+            int e = hoy.Year - fechaNacimiento.Year;
+            if (hoy < fechaNacimiento.AddYears(e))
+            {
+                e--;
+                return (e);
+                //return ("la edad es " + e.ToString() + "Años";);
 
-        //    }
-        //}
+            }
+        }
     }
 }

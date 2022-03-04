@@ -13,7 +13,9 @@ namespace Nuevoo
 {
     public partial class Datos : Form
     {
-        Persona persona = new Persona();
+        
+        List<Persona> per = new List<Persona>();
+
         public Datos()
         {
             InitializeComponent();
@@ -21,20 +23,35 @@ namespace Nuevoo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Persona persona = new Persona();
             persona.Dpi = textBoxdpi.Text.Trim();
             persona.Nombre = textBoxnombre.Text.Trim();
             persona.Nombre = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(persona.Nombre);
             persona.Apellido = textBoxapellido.Text;
             persona.Apellido = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(persona.Apellido);
             persona.fechaNacimiento = dateTimePickeredad.Value;
+            //persona.ed = eactual.Text;
+            //persona.ed = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(persona.ed);
+            per.Add(persona);
         }
 
         private void buttonmostrar_Click(object sender, EventArgs e)
         {
-            labeldpi.Text = persona.Dpi;
-            labelnombre.Text = persona.Nombre;
-            labelapellido.Text = persona.Apellido;
-            labelfechan.Text = persona.fechaNacimiento.ToString();
+            //labeldpi.Text = persona.Dpi;
+            //labelnombre.Text = persona.Nombre;
+            //labelapellido.Text = persona.Apellido;
+            //labelfechan.Text = persona.fechaNacimiento.ToString();
+            //foreach (var persona in per)
+            //{
+            //    writer.WriteLine(persona.Dpi);
+            //    writer.WriteLine(persona.Nombre);
+            //    writer.WriteLine(persona.Apellido);
+            //    writer.WriteLine(persona.fechaNacimiento);
+            //}
+            dataGridView1.DataSource = null;
+            dataGridView1.Refresh();
+            dataGridView1.DataSource = per;
+            dataGridView1.Refresh();
         }
 
         private void textBoxnombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -71,7 +88,7 @@ namespace Nuevoo
 
         private void buttoncalcularedad_Click(object sender, EventArgs e)
         {
-            eactual.Text="la edad es: " + persona.edad().ToString();
+
         }
 
         private void Borrarcontenido_Click(object sender, EventArgs e)

@@ -43,9 +43,11 @@
             this.labelfechan = new System.Windows.Forms.Label();
             this.labeldatos = new System.Windows.Forms.Label();
             this.buttonmostrar = new System.Windows.Forms.Button();
-            this.buttoncalcularedad = new System.Windows.Forms.Button();
             this.eactual = new System.Windows.Forms.Label();
             this.Borrarcontenido = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -166,12 +168,12 @@
             // labeldatos
             // 
             this.labeldatos.AutoSize = true;
-            this.labeldatos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldatos.Location = new System.Drawing.Point(430, 63);
+            this.labeldatos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldatos.Location = new System.Drawing.Point(430, 47);
             this.labeldatos.Name = "labeldatos";
-            this.labeldatos.Size = new System.Drawing.Size(50, 17);
+            this.labeldatos.Size = new System.Drawing.Size(57, 18);
             this.labeldatos.TabIndex = 13;
-            this.labeldatos.Text = "Datos";
+            this.labeldatos.Text = "Salida";
             // 
             // buttonmostrar
             // 
@@ -184,18 +186,6 @@
             this.buttonmostrar.Text = "Mostrar Datos";
             this.buttonmostrar.UseVisualStyleBackColor = false;
             this.buttonmostrar.Click += new System.EventHandler(this.buttonmostrar_Click);
-            // 
-            // buttoncalcularedad
-            // 
-            this.buttoncalcularedad.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.buttoncalcularedad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttoncalcularedad.Location = new System.Drawing.Point(74, 245);
-            this.buttoncalcularedad.Name = "buttoncalcularedad";
-            this.buttoncalcularedad.Size = new System.Drawing.Size(166, 39);
-            this.buttoncalcularedad.TabIndex = 15;
-            this.buttoncalcularedad.Text = "Calcular edad";
-            this.buttoncalcularedad.UseVisualStyleBackColor = false;
-            this.buttoncalcularedad.Click += new System.EventHandler(this.buttoncalcularedad_Click);
             // 
             // eactual
             // 
@@ -218,14 +208,33 @@
             this.Borrarcontenido.UseVisualStyleBackColor = false;
             this.Borrarcontenido.Click += new System.EventHandler(this.Borrarcontenido_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(71, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 18);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Entrada";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(504, 30);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 19;
+            // 
             // Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 346);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.Borrarcontenido);
             this.Controls.Add(this.eactual);
-            this.Controls.Add(this.buttoncalcularedad);
             this.Controls.Add(this.buttonmostrar);
             this.Controls.Add(this.labeldatos);
             this.Controls.Add(this.labelfechan);
@@ -243,6 +252,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Datos";
             this.Text = "Datos";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,9 +275,10 @@
         private System.Windows.Forms.Label labelfechan;
         private System.Windows.Forms.Label labeldatos;
         private System.Windows.Forms.Button buttonmostrar;
-        private System.Windows.Forms.Button buttoncalcularedad;
         private System.Windows.Forms.Label eactual;
         private System.Windows.Forms.Button Borrarcontenido;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
